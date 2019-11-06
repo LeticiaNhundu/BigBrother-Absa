@@ -48,7 +48,13 @@ namespace BigBrotherAPI.Controllers
         [HttpPut("updatePerson")]
         public ActionResult<List<Person>> UpdatePerson([FromBodyAttribute] Person person)
         {
-            return _service.UpdatePerson(person);
+            if(GetPerson(person.abnumber) == null)
+            {
+                return _service.UpdatePerson(person);
+            } else
+            {
+                return Conflict("User already exist");
+            }
         }
 
         [HttpDelete("deletePerson/{abNumber}")]

@@ -1,5 +1,4 @@
 // tslint:disable
-/// <reference path="./custom.d.ts" />
 /**
  * BigBrother
  * Api for Big Brother bigbrother
@@ -56,6 +55,7 @@ export class BaseAPI {
         }
     }
 }
+
 /**
  *
  * @export
