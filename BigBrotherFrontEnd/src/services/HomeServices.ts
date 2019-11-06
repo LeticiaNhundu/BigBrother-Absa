@@ -12,6 +12,7 @@ export default  class HomeServices {
     emotion:any;
     public teamsList: any = [];
     emotionDisplay:any= [];
+     max:any=[];
 
     public constructor() {
         this.teamApi = new API.TeamsApi();
@@ -44,16 +45,32 @@ export default  class HomeServices {
         let allWeeklyEmotions:any =  await this.getWeeklyEmotions();
 
     let results:any;
+    let results1:any;
     // tslint:disable-next-line:typedef
     results = allWeeklyEmotions.reduce(function (r, a) {
-        r[a.person_fk] = r[a.person_fk] || [];
+        // tslint:disable-next-line:no-unused-expression
+        r[a.person_fk] = r[a.person_fk] // &&
+         // r[a.emotion_date] === r[a.emotion_date]
+          || [];
         r[a.person_fk].push(a);
         return r;
     }, Object.create(null));
+    // tslint:disable-next-line:typedef
+    Object.keys(results).forEach(element => {
+    // tslint:disable-next-line:typedef
+    results1 = results[element].reduce(function (x, b) {
+        // tslint:disable-next-line:no-unused-expression
+        x[b.emotion_date] = x[b.emotion_date] // &&
+         // r[a.emotion_date] === r[a.emotion_date]
+          || [];
+        x[b.emotion_date].push(b);
+       return x;
+    }, Object.create(null));
+    console.log(results1);
     let maxPercentageRow:any=[];
     let maxArray:any =[];
- Object.keys(results).forEach(element => {
-    maxPercentageRow= results[element].reduce((acc, val) => {
+ Object.keys(results1).forEach(element => {
+    maxPercentageRow= results1[element].reduce((acc, val) => {
 
            acc = ( acc.percentage === undefined || val.percentage > acc.percentage) ? val : acc;
            return acc;
@@ -64,8 +81,14 @@ export default  class HomeServices {
  // console.log(maxArray);
  // maxArray.array.forEach(element => {
  // });
-        return maxArray;
+ this.max.push(maxArray);
+      //   return maxArray;
+});
+console.log(this.max);
+return this.max ;
+
     }
+
     async getMembersWeeklyEmotions(allWeeklyEmotions: any[], teamMembers: any []):Promise<any> {
         let weeklyMembersEmotions: any = [];
 

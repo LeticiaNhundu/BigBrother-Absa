@@ -37,6 +37,11 @@
             <md-icon>people_alt</md-icon>
             <span class="md-list-item-text">Teams</span>
           </md-list-item>
+
+          <md-list-item router-link to="/WeeklyView">
+            <md-icon>calendar_view_day</md-icon>
+            <span class="md-list-item-text">WeeklyView</span>
+          </md-list-item>
           
         </md-list>
       </md-app-drawer>
