@@ -174,18 +174,20 @@ export default class HomeTS extends Vue {
     return this.people;
   }
   populateTable(teamWeeklyEmotions: any): void {
-    console.log(teamWeeklyEmotions);
+
     for (var i: number = 0; i < teamWeeklyEmotions.length; i++) {
-      this.id = teamWeeklyEmotions[i].person_fk;
-      this.emotionId = teamWeeklyEmotions[i].emotion_fk;
-      this.percentage = teamWeeklyEmotions[i].percentage.toString();
+      console.log(teamWeeklyEmotions[i].length);
+       for (var x: number = 0; x <teamWeeklyEmotions[i].length ; x++) {
+      this.id = teamWeeklyEmotions[i][x].person_fk;
+      this.emotionId = teamWeeklyEmotions[i][x].emotion_fk;
+      this.percentage = teamWeeklyEmotions[i][x].percentage;
       let daysArray: any[][];
       this.emotion = this.emotions
         .filter(x => x.emotion_id === this.emotionId)
         .map(p => p.emotion_name)
         .toString();
       let days: Map<string, any> = new Map<string, any>();
-      let day: any = new Date(teamWeeklyEmotions[i].emotion_date);
+      let day: any = new Date(teamWeeklyEmotions[i][x].emotion_date);
       let name: any =this. _homeService.getDay(day);
       let emotionNamePercentage: string =
         this.emotion + " - " + this.percentage;
@@ -208,9 +210,9 @@ export default class HomeTS extends Vue {
         friday: days.get("Friday")
       });
     }
-
+    }
     console.log("users: " + this.users);
-  }
+}
 }
 </script>
 
