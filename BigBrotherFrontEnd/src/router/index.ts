@@ -4,6 +4,7 @@ import Home from '../components/Home.vue'
 import Team from '../components/Team.vue';
 import Trainer from '../components/Trainer.vue';
 import MonthView from '../components/MonthView.vue';
+import WeeklyView from '../components/WeeklyView.vue';
 
 
 Vue.use(VueRouter)
@@ -28,6 +29,12 @@ const routes = [
     path: '/monthview',
     name: 'monthview',
     component: MonthView
+  },
+
+  {
+    path: '/WeeklyView',
+    name: 'WeeklyView',
+    component: WeeklyView
   }
   // {
   //   path: '/about',

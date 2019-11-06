@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leticia.nhundu\\Desktop\\BigBrother\\BigBrotherAPI\\BigBrotherAPI.csproj": {}
+    "C:\\Users\\leepo.mokoto\\Documents\\GitHub\\BigBrother-Absa\\BigBrotherAPI\\BigBrotherAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leticia.nhundu\\Desktop\\BigBrother\\BigBrotherAPI\\BigBrotherAPI.csproj": {
+    "C:\\Users\\leepo.mokoto\\Documents\\GitHub\\BigBrother-Absa\\BigBrotherAPI\\BigBrotherAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leticia.nhundu\\Desktop\\BigBrother\\BigBrotherAPI\\BigBrotherAPI.csproj",
+        "projectUniqueName": "C:\\Users\\leepo.mokoto\\Documents\\GitHub\\BigBrother-Absa\\BigBrotherAPI\\BigBrotherAPI.csproj",
         "projectName": "BigBrotherAPI",
-        "projectPath": "C:\\Users\\leticia.nhundu\\Desktop\\BigBrother\\BigBrotherAPI\\BigBrotherAPI.csproj",
-        "packagesPath": "C:\\Users\\leticia.nhundu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leticia.nhundu\\Desktop\\BigBrother\\BigBrotherAPI\\obj\\",
+        "projectPath": "C:\\Users\\leepo.mokoto\\Documents\\GitHub\\BigBrother-Absa\\BigBrotherAPI\\BigBrotherAPI.csproj",
+        "packagesPath": "C:\\Users\\leepo.mokoto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\leepo.mokoto\\Documents\\GitHub\\BigBrother-Absa\\BigBrotherAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\leticia.nhundu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\leepo.mokoto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
